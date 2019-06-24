@@ -2,9 +2,10 @@ package edu.javacourse.studentorder.domain;
 
 import java.time.LocalDate;
 
-public class Child extends Person {
+public class Child extends Person
+{
     private String certificateNumber;
-    private LocalDate issueName;
+    private LocalDate issueDate;
     private String issueDepartment;
 
     public Child(String surName, String givenName, String patronymic, LocalDate dateOfBirth) {
@@ -19,12 +20,12 @@ public class Child extends Person {
         this.certificateNumber = certificateNumber;
     }
 
-    public LocalDate getIssueName() {
-        return issueName;
+    public LocalDate getIssueDate() {
+        return issueDate;
     }
 
-    public void setIssueName(LocalDate issueName) {
-        this.issueName = issueName;
+    public void setIssueDate(LocalDate issueDate) {
+        this.issueDate = issueDate;
     }
 
     public String getIssueDepartment() {

@@ -1,20 +1,26 @@
 package edu.javacourse.studentorder.domain;
 
-import edu.javacourse.studentorder.domain.other.Adult;
+import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
 
 public class StudentOrder
 {
-private  long sudenOrderId;
-private Adult husband;
-private  Adult wife;
-private  Child child;
+    private long studentOrderId;
+    private Adult husband;
+    private Adult wife;
+    private List<Child> children;
+    private String marriageCertificateId;
+    private String marriageOffice;
+    private LocalDate marriageDate;
 
-    public long getSudenOrderId() {
-        return sudenOrderId;
+    public long getStudentOrderId() {
+        return studentOrderId;
     }
 
-    public void setSudenOrderId(long sudenOrderId) {
-        this.sudenOrderId = sudenOrderId;
+    public void setStudentOrderId(long studentOrderId) {
+        this.studentOrderId = studentOrderId;
     }
 
     public Adult getHusband() {
@@ -33,11 +39,38 @@ private  Child child;
         this.wife = wife;
     }
 
-    public Child getChild() {
-        return child;
+    public void addChild(Child child) {
+        if (children == null) {
+            children = new ArrayList<>(5);
+        }
+        children.add(child);
     }
 
-    public void setChild(Child child) {
-        this.child = child;
+    public List<Child> getChildren() {
+        return children;
+    }
+
+    public String getMarriageCertificateId() {
+        return marriageCertificateId;
+    }
+
+    public void setMarriageCertificateId(String marriageCertificateId) {
+        this.marriageCertificateId = marriageCertificateId;
+    }
+
+    public String getMarriageOffice() {
+        return marriageOffice;
+    }
+
+    public void setMarriageOffice(String marriageOffice) {
+        this.marriageOffice = marriageOffice;
+    }
+
+    public LocalDate getMarriageDate() {
+        return marriageDate;
+    }
+
+    public void setMarriageDate(LocalDate marriageDate) {
+        this.marriageDate = marriageDate;
     }
 }
